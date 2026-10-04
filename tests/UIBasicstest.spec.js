@@ -29,14 +29,14 @@ test ('First Playwright Test', async ({ page }) =>
 });
 
 
-test.only('UI Controls', async ({ page }) => 
+test('UI Controls', async ({ page }) =>
 {
 
     await page.goto('https://rahulshettyacademy.com/loginpagePractise/');
-    page.locator('#username').fill('rahulshettyacademy');
-     page.locator('#signInBtn').fill('Learning@830$3mK2');
+    await page.locator('#username').fill('rahulshettyacademy');
+    await page.locator('#password').fill('Learning@830$3mK2');
     const dropdown = page.locator('select.form-control');
-    await dropdown.selectOption('consultant');
+    await dropdown.selectOption('consult');
 
 
         
